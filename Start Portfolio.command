@@ -13,4 +13,11 @@ if [[ ! -d node_modules ]]; then
 fi
 print 'Portfolio: http://127.0.0.1:5173'
 print 'Content editor: http://127.0.0.1:5173/edit'
-exec npm run dev
+node scripts/start-portfolio.mjs
+result=$?
+if [[ "$result" -ne 0 ]]; then
+  print 'The server could not start. Check the error above.'
+  print 'If port 5173 is already in use, try http://127.0.0.1:5173 in your browser.'
+  read '?Press Enter to close.'
+fi
+exit "$result"

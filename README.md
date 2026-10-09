@@ -4,7 +4,7 @@ A photography portfolio for Yeah Jing Ze. React, TypeScript and Vite; Node.js ru
 
 ## Run and edit
 
-On this Mac, double-click **Start Portfolio.command** to launch the site and editor. A verified Node.js runtime is included locally under ignored `.tools/` so no system installation is needed. Keep the terminal open.
+On this Mac, double-click **Start Portfolio.command** in Finder to launch the site and editor. It opens Terminal and automatically opens your browser once the server is ready. Opening the file inside VS Code only displays its source; you can also run `./"Start Portfolio.command"` in the VS Code terminal. A verified Node.js runtime is included locally under ignored `.tools/` so no system installation is needed. Keep the terminal open.
 
 On another computer, install Node.js 22 LTS or newer, then run these commands in this folder:
 
