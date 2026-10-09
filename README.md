@@ -22,7 +22,7 @@ Open **http://127.0.0.1:5173/edit** for the content editor. You can:
 
 Click **Save changes**, then refresh the portfolio. Changes save to `public/content.json`; uploads save under `public/photos/` or `public/videos/`. The editor runs only on the local development server and is unavailable on the published site. Keep the terminal open while editing. Uploaded files are not automatically compressed; resize large images before uploading. Use Git to publish saved changes. Removed gallery entries do not delete their media files.
 
-The initial gallery includes 14 photographs. `photo/IMG_8183.JPG` appeared black in its preview and was omitted; the original remains intact. Gallery titles and categories are editable starting points. The About image is a photograph from the collection, not an identified portrait of Jing Ze.
+The initial gallery includes 14 photographs. `photo/IMG_8183.JPG` appeared black in its preview and was omitted; the original remains intact. Gallery titles and categories are editable starting points. The About section uses Jing Ze’s portrait at `public/photos/me.JPG`.
 
 ## Build
 
