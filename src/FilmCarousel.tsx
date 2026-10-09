@@ -43,7 +43,7 @@ export default function FilmCarousel({films}:{films:Film[]}) {
    if(event.key==='ArrowLeft'){event.preventDefault();go(Math.max(active-1,0));}
   }}>
    {films.map((film,index)=><article className="film" key={film.id} role="group" aria-roledescription="slide" aria-label={`${index+1} of ${films.length}: ${film.title}`} inert={index!==active}>
-    <div className="film-media">{film.type==='file'?<video controls preload="none" poster={asset(film.poster)} src={asset(film.url)} aria-label={film.title}/>:<a href={film.url} target="_blank" rel="noreferrer" aria-label={`Watch ${film.title} on Instagram`}><img src={asset(film.poster)} alt="" loading="lazy"/><span className="play"><Play fill="currentColor" size={24}/></span><span className="film-label">WATCH ON INSTAGRAM <ArrowUpRight size={16}/></span></a>}</div>
+    <div className="film-media">{film.type==='file'?<video controls preload="none" poster={asset(film.poster)} src={asset(film.url)} aria-label={film.title}/>:<a href={film.url} target="_blank" rel="noreferrer" aria-label={`Watch ${film.title} on Instagram`}><img src={asset(film.poster)} alt="" loading="lazy"/><span className="play"><Play fill="currentColor" size={18}/></span><span className="film-label">WATCH ON INSTAGRAM <ArrowUpRight size={16}/></span></a>}</div>
     <div className="film-copy"><span className="eyebrow lavender">MOVING IMAGES</span><h3>{film.title}</h3><p>{film.description}</p>{film.type==='instagram'&&<a className="text-link" href={film.url} target="_blank" rel="noreferrer">Watch the reel <ArrowUpRight size={18}/></a>}</div>
    </article>)}
   </div>
