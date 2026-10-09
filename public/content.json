@@ -8,13 +8,54 @@
   "equipment": [
     "Sony ZV-E10",
     "E 18–135mm F3.5–5.6",
-    "Fotopro tripod"
+    "Fotopro tripod",
+    "Godox iT32"
   ],
   "experience": [
     {
       "company": "BBK",
       "role": "Creative production intern",
       "description": "Edited reels, assisted with shoots, and helped set up scenes for filming."
+    },
+    {
+      "company": "Operion E-Commerce Sdn Bhd",
+      "role": "Web Developer Intern",
+      "category": "Work",
+      "dates": "Sept 2022 – Feb 2023 · 6 months",
+      "location": "Malaysia",
+      "description": "Developed responsive web interfaces and improved user experience, backend integration, and development workflows.",
+      "highlights": [
+        "Developed responsive web interfaces using HTML, CSS, and JavaScript, improving page load performance by up to 20%.",
+        "Collaborated with cross-functional teams to optimise user experience, reducing user drop-off rates.",
+        "Streamlined backend integration and debugging processes, improving system performance by 15%.",
+        "Adopted new technologies and development practices to improve workflow efficiency."
+      ]
+    },
+    {
+      "company": "MyTech Career Fair 2025, University of Malaya",
+      "role": "Head of Multimedia Department",
+      "category": "Leadership",
+      "dates": "2025",
+      "location": "Kuala Lumpur, Malaysia",
+      "description": "Led multimedia production for event content and promotional materials.",
+      "highlights": [
+        "Led the multimedia team in planning and producing visual content for events and promotional materials.",
+        "Managed design, photography, and video production to ensure consistent branding and high-quality output.",
+        "Coordinated with different departments to deliver engaging multimedia content that enhanced audience reach and event impact."
+      ]
+    },
+    {
+      "company": "SULAM Project, University of Malaya",
+      "role": "Project Manager",
+      "category": "Leadership",
+      "dates": "2024",
+      "location": "Kuala Lumpur, Malaysia",
+      "description": "Managed a multidisciplinary student team delivering a Java workshop for secondary school students.",
+      "highlights": [
+        "Led a multidisciplinary student team to organise and execute a Java workshop for secondary school students.",
+        "Coordinated project tasks, timelines, and deliverables to ensure smooth workshop execution.",
+        "Facilitated team communication and collaboration to deliver an effective learning experience for participants."
+      ]
     }
   ],
   "photos": [
@@ -120,11 +161,79 @@
   "films": [
     {
       "id": "reel-1",
-      "title": "Stories in motion",
-      "description": "A glimpse into my videography. Watch the full reel on Instagram.",
+      "title": "Brand New Day in Japan",
+      "description": "Watch the full reel on Instagram.",
       "url": "https://www.instagram.com/reel/Db0DAKZP2dZ/",
-      "poster": "covers/instagram-6cf19e85f2c6a0ef30f17b5b.jpg",
+      "poster": "photos/576e6b0c-2d3c-4f8c-a97b-dd5f576006ee.jpeg",
       "type": "instagram"
+    },
+    {
+      "id": "095baa6b-f91b-4fd5-8b62-d3cd2596ec36",
+      "title": "Mirror",
+      "description": "Watch the full reel on Instagram.",
+      "url": "https://www.instagram.com/reel/DYE1uCWSENa/?utm_source=ig_web_copy_link&exln=MzRlODBiNWFlZA==&srtk=MzRlODBiNWFlZA==",
+      "poster": "photos/3f442944-9f41-466d-a8cc-4145776ea4d7.jpg",
+      "type": "instagram"
+    }
+  ],
+  "projects": [
+    {
+      "id": "dancecue",
+      "title": "DanceCue",
+      "description": "DanceCue helps dancers practise more smoothly by allowing them to load music, create rehearsal section markers, jump to specific parts of a song, and loop sections without constantly touching the music player.",
+      "features": [
+        "Load music for a rehearsal.",
+        "Create section markers to organise the parts you want to practise.",
+        "Jump straight to a specific part of a song.",
+        "Loop a section to repeat it with fewer interruptions."
+      ],
+      "url": "https://dance-cue.vercel.app/",
+      "repository": "https://github.com/JzeAnson/DanceCue",
+      "cover": "photos/dancecue_cover.JPG",
+      "category": "Software Project"
+    },
+    {
+      "id": "qdees-shine-like-a-star",
+      "title": "Q-dees: Shine Like a Star",
+      "subtitle": "Concert & Graduation 2026 · Event Photography",
+      "role": "Event photographer",
+      "cover": "projects/qdees/DSC01443.jpg",
+      "description": "Photographed the performances of children aged 4–6 at Q-dees’ “Shine Like a Star” concert and graduation event. The project focused on capturing their expressions, movements, and moments on stage as they performed.\n\nThrough the photographs, I aimed to preserve the excitement of the occasion and celebrate each child’s participation, creating lasting memories of this milestone.",
+      "featuresHeading": "Photography focus",
+      "features": [
+        "Children’s expressions and movements during performances",
+        "Individual moments and group performances on stage",
+        "The atmosphere of the concert and graduation celebration"
+      ],
+      "url": "",
+      "repository": "",
+      "gallery": [
+        {
+          "src": "projects/qdees/DSC01242.jpg",
+          "alt": "Children in orange tiger costumes singing together at a microphone"
+        },
+        {
+          "src": "projects/qdees/DSC01443.jpg",
+          "alt": "Children in bright yellow costumes performing together on stage"
+        },
+        {
+          "src": "projects/qdees/DSC01697.jpg",
+          "alt": "Children in red graduation gowns raising their hands during a performance"
+        },
+        {
+          "src": "projects/qdees/DSC01856.jpg",
+          "alt": "Children in animal-themed costumes gathered in front of a forest backdrop"
+        },
+        {
+          "src": "projects/qdees/DSC02004.jpg",
+          "alt": "A child in an orange fish costume performing on stage"
+        },
+        {
+          "src": "projects/qdees/DSC02309.jpg",
+          "alt": "Two children in red graduation gowns performing beside a microphone"
+        }
+      ],
+      "category": "Event Photography"
     }
   ]
 }

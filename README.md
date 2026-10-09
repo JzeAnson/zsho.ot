@@ -19,11 +19,15 @@ Open **http://127.0.0.1:5173/edit** for the content editor. You can:
 - Add or replace photos, edit titles and descriptions, reorder the gallery and choose the cover image.
 - Add Instagram reel links or upload MP4/WebM videos (up to 64 MB). Videos appear one at a time in a horizontal carousel with navigation arrows when there is more than one. Visitors can swipe or use arrow keys to browse.
 - Choose a gallery photo for a video cover, upload a JPG/PNG/WebP from Finder, or click **Get Instagram cover** after entering a public reel link. Instagram imports use the public page’s cover metadata when available, and keep your current cover when retrieval fails. Covers are saved under `public/covers/` and deploy with the website; no Instagram credentials are required. On macOS, importing uses the built-in `/usr/bin/curl` for system networking support; other systems use Node’s networking. Finder uploads use `public/photos/`.
-- Update your introduction, biography, equipment and experience.
+- Add projects with descriptions, features, live website links and source repository links in the **Projects** tab.
+- Add work and leadership roles with dates, locations, summaries and achievements in the **Experience** tab.
+- Update your introduction, biography and equipment.
 
 Click **Save changes**, then refresh the portfolio. Changes save to `public/content.json`; uploads save under `public/photos/` or `public/videos/`. The editor runs only on the local development server and is unavailable on the published site. Keep the terminal open while editing. Uploaded files are not automatically compressed; resize large images before uploading. Use Git to publish saved changes. Removed gallery entries do not delete their media files.
 
 The initial gallery includes 14 photographs. `photo/IMG_8183.JPG` appeared black in its preview and was omitted; the original remains intact. Gallery titles and categories are editable starting points. The About section uses Jing Ze’s portrait at `public/photos/me.JPG`.
+
+The navigation links to separate **Projects** (`projects.html`) and **Experience** (`experience.html`) pages. The homepage includes a project summary and links to the detailed pages. Cards on both pages open a dedicated project detail URL (`project.html?id=dancecue`). The homepage shows up to four cards and a **More projects** link when there are more. Project covers can be uploaded or set using a local image path in the editor. Projects can also include a subtitle, your role, a custom highlights heading, and a photo gallery. The Q-dees project uses six resized web copies in `public/projects/qdees/`, selected from the originals in `public/Refine/`. All pages read the same `public/content.json`, so saved edits update their content together. The build includes all four HTML files and supports direct page visits on static hosts without rewrite rules.
 
 ## Storage
 
