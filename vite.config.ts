@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react';
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { randomUUID } from 'node:crypto';
+import { CoverError, importInstagramCover } from './scripts/instagram-cover';
 const token = randomUUID();
 function editorApi(): Plugin {
  return { name: 'local-content-editor', apply: 'serve', configureServer(server) {
@@ -14,6 +15,11 @@ function editorApi(): Plugin {
    if(req.url === '/api/session' && req.method === 'GET') return reply(200,{token});
    if(req.headers['x-editor-token'] !== token) return reply(403,{error:'Editor session expired. Reload this page.'});
    try {
+    if(req.url === '/api/instagram-cover' && req.method === 'POST') {
+     const chunks: Buffer[]=[]; let size=0; for await(const part of req){size+=part.length;if(size>4096)return reply(413,{error:'The reel link is too long.'});chunks.push(part);}
+     let data;try{data=JSON.parse(Buffer.concat(chunks).toString());}catch{return reply(400,{error:'Enter a valid Instagram reel URL.'});}
+     try{return reply(200,{src:await importInstagramCover(data?.url,resolve('public'))});}catch(error){return reply(error instanceof CoverError?error.status:502,{error:error instanceof CoverError?error.message:'Could not get the cover. Upload a cover from Finder.'});}
+    }
     if(req.url === '/api/content' && req.method === 'PUT') {
      const chunks: Buffer[]=[]; let size=0; for await (const part of req) {size+=part.length; if(size>1024*1024) return reply(413,{error:'Content is too large.'}); chunks.push(part);}
      const data=JSON.parse(Buffer.concat(chunks).toString());
