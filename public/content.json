@@ -1,0 +1,130 @@
+{
+  "name": "zsho.ot",
+  "tagline": "Capturing moments that deserve to be shared.",
+  "introduction": "Photography & visual storytelling by Yeah Jing Ze.",
+  "bio": "I’m Yeah Jing Ze, a Multimedia Computing student at the University of Malaya with a passion for photography and visual storytelling. I enjoy capturing moments and emotions through event, portrait, street, and creative photography. Through photography, I aim to preserve meaningful experiences while expressing creativity.",
+  "hero": "photos/IMG_6825.jpg",
+  "instagram": "https://www.instagram.com/zsho.ot/",
+  "equipment": [
+    "Sony ZV-E10",
+    "E 18–135mm F3.5–5.6",
+    "Fotopro tripod"
+  ],
+  "experience": [
+    {
+      "company": "BBK",
+      "role": "Creative production intern",
+      "description": "Edited reels, assisted with shoots, and helped set up scenes for filming."
+    }
+  ],
+  "photos": [
+    {
+      "id": "IMG_1770",
+      "src": "photos/IMG_1770.jpg",
+      "title": "In the light",
+      "category": "Portraits",
+      "alt": "A dancer bending backwards in a sunlit garden"
+    },
+    {
+      "id": "IMG_6825",
+      "src": "photos/IMG_6825.jpg",
+      "title": "A quieter world",
+      "category": "Street & travel",
+      "alt": "Mount Fuji framed by autumn leaves"
+    },
+    {
+      "id": "IMG_0774",
+      "src": "photos/IMG_0774.jpg",
+      "title": "Before the moment",
+      "category": "Events",
+      "alt": "Performers gathered under blue stage lighting"
+    },
+    {
+      "id": "DSC00524",
+      "src": "photos/DSC00524.jpg",
+      "title": "Chasing the last light",
+      "category": "Portraits",
+      "alt": "A person photographing a golden sunset"
+    },
+    {
+      "id": "IMG_8230",
+      "src": "photos/IMG_8230.jpg",
+      "title": "A frame within a frame",
+      "category": "Creative",
+      "alt": "A seaside scene inside a rectangular frame"
+    },
+    {
+      "id": "IMG_1691",
+      "src": "photos/IMG_1691.jpg",
+      "title": "Golden hours",
+      "category": "Candid",
+      "alt": "Two people swimming in golden sunlit water"
+    },
+    {
+      "id": "IMG_6826",
+      "src": "photos/IMG_6826.jpg",
+      "title": "Passing through",
+      "category": "Street & travel",
+      "alt": "Visitors gathering in front of a Japanese temple"
+    },
+    {
+      "id": "IMG_1076",
+      "src": "photos/IMG_1076.jpg",
+      "title": "Between the scenes",
+      "category": "Events",
+      "alt": "Performers in a dark theatre"
+    },
+    {
+      "id": "IMG_2067",
+      "src": "photos/IMG_2067.jpg",
+      "title": "Stillness",
+      "category": "Candid",
+      "alt": "A duck floating on a quiet lake beside reeds"
+    },
+    {
+      "id": "DSC00338",
+      "src": "photos/DSC00338.jpg",
+      "title": "Together, quietly",
+      "category": "Candid",
+      "alt": "A couple sitting together looking out at the sea"
+    },
+    {
+      "id": "IMG_0779",
+      "src": "photos/IMG_0779.jpg",
+      "title": "Taking the stage",
+      "category": "Events",
+      "alt": "A performer reaching upward on stage"
+    },
+    {
+      "id": "IMG_6848",
+      "src": "photos/IMG_6848.jpg",
+      "title": "Autumn studies",
+      "category": "Creative",
+      "alt": "Red and orange maple leaves in sunlight"
+    },
+    {
+      "id": "IMG_8232",
+      "src": "photos/IMG_8232.jpg",
+      "title": "Down to the sea",
+      "category": "Street & travel",
+      "alt": "Stairs leading past a seaside restaurant beneath trees"
+    },
+    {
+      "id": "IMG_0775",
+      "src": "photos/IMG_0775.jpg",
+      "title": "A voice in the room",
+      "category": "Events",
+      "alt": "A performer holding a microphone under purple lights"
+    }
+  ],
+  "films": [
+    {
+      "id": "reel-1",
+      "title": "Stories in motion",
+      "description": "A glimpse into my videography. Watch the full reel on Instagram.",
+      "url": "https://www.instagram.com/reel/Db0DAKZP2dZ/",
+      "poster": "photos/IMG_0779.jpg",
+      "type": "instagram"
+    }
+  ]
+}
