@@ -53,3 +53,7 @@ git push -u origin main
 ```
 
 Original photos, the original logo directory and the PDF are ignored. Web copies in `public/` are tracked. The repository does not publish a website by itself; connect a static host to it, or configure GitHub Pages. No credentials or tokens belong in this repository.
+
+## Branding
+
+The header uses `public/brand/refine-icon.svg`, a white vector traced from the icon in `refinelogo.png`, with a transparent background. The footer uses the full `public/brand/refinelogo.png`. Updating the PNG does not automatically regenerate the header vector.
