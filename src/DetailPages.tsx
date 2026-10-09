@@ -29,7 +29,8 @@ export function ProjectDetailPage({content, projectId}: {content: Content; proje
    {project?.subtitle && <p>{project.subtitle}</p>}
    {!project && <p>This project is unavailable. Browse all projects to find something else.</p>}
   </section>
-  {project && <section className="detail-collection section" aria-label={`${project.title} details`}>
+  {project && <section className={`detail-collection section${project.category==='Event Photography'?' event-photography-detail':''}`} aria-label={`${project.title} details`}>
+   <div className={`project-overview${project.cover?' overview-with-cover':''}`}>
    {project.cover && <img className={`project-detail-cover${project.gallery?.length?' has-gallery':''}`} src={asset(project.cover)} alt={`${project.title} cover`}/>}
    <article className="detail-card project-detail">
     <div className="detail-meta"><h2>About the <em>project.</em></h2>{project.role && <p className="project-role"><span className="eyebrow muted">MY ROLE</span>{project.role}</p>}</div>
@@ -41,6 +42,7 @@ export function ProjectDetailPage({content, projectId}: {content: Content; proje
      </div>}
     </div>
    </article>
+   </div>
    {!!project.gallery?.length && <section className="project-gallery" aria-label="Selected event photographs">
     <div className="section-heading"><h2>A few <em>highlights.</em></h2><p>Selected photographs from the event.</p></div>
     <div className="project-gallery-grid">{project.gallery.map((photo,i)=><img src={asset(photo.src)} alt={photo.alt} loading="lazy" key={`${photo.src}-${i}`}/>)}</div>
@@ -58,7 +60,7 @@ export default function DetailPages({page, content}: {page: 'projects' | 'experi
    <h1>{isProjects ? <>Projects with <em>purpose.</em></> : <>Experience that <em>shapes me.</em></>}</h1>
    <p>{isProjects ? 'A closer look at the things I build and the needs they address.' : 'My work, the teams I’ve led, and the contributions I’ve made along the way.'}</p>
   </section>
-  {isProjects ? <section className="detail-collection section" aria-label="Projects">
+  {isProjects ? <section className="detail-collection projects-listing section" aria-label="Projects">
    <ProjectCards projects={content.projects || []}/>
    {!(content.projects || []).length && <p className="muted">More projects will be added as the collection grows.</p>}
   </section> : <section className="detail-collection section" aria-label="Experience">

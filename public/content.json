@@ -225,15 +225,47 @@
           "alt": "Children in animal-themed costumes gathered in front of a forest backdrop"
         },
         {
+          "src": "projects/qdees/DSC01743.jpg",
+          "alt": "An adult holding a child in an orange costume with a bouquet at the event"
+        },
+        {
+          "src": "projects/qdees/DSC01756.jpg",
+          "alt": "A child in a grey animal costume posing for a phone photograph"
+        },
+        {
           "src": "projects/qdees/DSC02004.jpg",
           "alt": "A child in an orange fish costume performing on stage"
         },
         {
           "src": "projects/qdees/DSC02309.jpg",
           "alt": "Two children in red graduation gowns performing beside a microphone"
+        },
+        {
+          "src": "projects/qdees/DSC01330.jpg",
+          "alt": "Children wearing animal ears and navy outfits performing hand movements together"
+        },
+        {
+          "src": "projects/qdees/DSC01774.jpg",
+          "alt": "A child receiving an event gift bag at the concert registration table"
         }
       ],
       "category": "Event Photography"
+    },
+    {
+      "id": "8am-rush",
+      "title": "8am-rush",
+      "category": "Game Development",
+      "subtitle": "2D Side-Scrolling Platformer · Phaser 4, React & TypeScript",
+      "cover": "photos/8am-rush.png",
+      "description": "A 2D side-scrolling platformer game built with Phaser 4, React, and TypeScript. You play as a university student racing against the clock to reach Universiti Malaya before 8:00 AM.",
+      "featuresHeading": "Game & technology",
+      "features": [
+        "2D side-scrolling platformer gameplay.",
+        "A race against the clock to reach Universiti Malaya before 8:00 AM.",
+        "Built with Phaser 4, React, and TypeScript."
+      ],
+      "url": "",
+      "repository": "https://github.com/zhengwei0409/8am-rush"
     }
   ]
 }

@@ -69,7 +69,7 @@ test('photography projects show their gallery and role without app actions', asy
  assert.ok(!html.includes('What it does'));
  assert.ok(!html.includes('Try Q-dees'));
  assert.ok(!html.includes('View source'));
- assert.equal(project.gallery.length, 6);
+ assert.equal(project.gallery.length, 10);
  for (const photo of project.gallery) {
   assert.ok(html.includes(`src="./${photo.src}"`));
   assert.ok(photo.alt.length > 0);
