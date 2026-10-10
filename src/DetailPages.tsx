@@ -1,5 +1,46 @@
 import {ArrowLeft, ArrowUpRight, Github} from 'lucide-react';
-import {asset, type Content, type Project} from './types';
+import {asset, type Content, type Project, type Experience} from './types';
+
+const experienceId = (entry: Experience) => entry.id || entry.company;
+
+export function ExperienceDetailPage({content, entryId}: {content: Content; entryId: string | null}) {
+ const entry = content.experience.find(entry => experienceId(entry) === entryId);
+ const highlights = entry?.highlights?.filter(highlight => highlight.trim()) || [];
+ return <main className="detail-page" id="home">
+  <section className={entry?.cover ? 'hero experience-hero' : 'detail-intro section'}>
+   {entry?.cover && <><img className="hero-image" src={asset(entry.cover)} alt={`${entry.company} behind the scenes`} fetchPriority="high"/><div className="hero-shade"/></>}
+   <div className={entry?.cover ? 'experience-hero-copy' : 'experience-intro-copy'}>
+   <a className="text-link back-link" href={asset('experience.html')}><ArrowLeft size={16}/> All experience</a>
+   <span className="eyebrow green">EXPERIENCE / A CLOSER LOOK</span>
+   <h1 className={entry?.company && entry.company.length > 40 ? 'experience-long-title' : undefined}>{entry?.company || 'Experience not found'}</h1>
+   <p>{entry?.role || 'This experience is unavailable. Browse all experience to find something else.'}</p>
+   </div>
+  </section>
+  {entry && <section className="detail-collection section" aria-label={`${entry.company} details`}>
+   <article className="detail-card">
+    <div className="detail-meta"><span className="eyebrow lavender">{entry.category || 'Work'}</span><h2>My <em>role.</em></h2><h3>{entry.role}</h3>{entry.dates && <p>{entry.dates}</p>}{entry.location && <span className="detail-location">{entry.location}</span>}</div>
+    <div className="detail-copy"><p className="detail-description">{entry.description}</p>{highlights.length > 0 && <><h3>Responsibilities & contributions</h3><ul>{highlights.map((highlight,i) => <li key={i}>{highlight}</li>)}</ul></>}</div>
+   </article>
+   {!!entry.gallery?.length && <section className="experience-gallery" aria-label="Experience photo gallery">
+    <div className="section-heading"><h2>A few <em>highlights.</em></h2><p>Design work and moments from the event.</p></div>
+    <div className="experience-gallery-grid">{entry.gallery.map(photo => <figure className={photo.wide ? 'experience-gallery-wide' : undefined} key={photo.src}>
+     <a href={asset(photo.src)} target="_blank" rel="noreferrer" aria-label={`Open full-size image: ${photo.alt}`}><img src={asset(photo.src)} alt={photo.alt} loading="lazy"/></a>
+     {photo.caption && <figcaption>{photo.caption}</figcaption>}
+    </figure>)}</div>
+   </section>}
+   {!!entry.reels?.length && <section className="experience-reels" aria-label="Reels I edited">
+    <div className="section-heading"><h2>Reels I <em>edited.</em></h2><p>Selected edits for {entry.company}.</p></div>
+    <div className="experience-reel-grid">{entry.reels.map((reel,i) => {
+     const shortcode = /^https:\/\/(?:www\.)?instagram\.com\/reel\/([A-Za-z0-9_-]+)\/?(?:\?.*)?$/.exec(reel.url)?.[1];
+     return <article className="experience-reel" key={reel.id}>
+      {shortcode && <iframe src={`https://www.instagram.com/reel/${shortcode}/embed/`} title={`Instagram reel: ${reel.title}`} loading="lazy" allow="encrypted-media; fullscreen" allowFullScreen referrerPolicy="strict-origin-when-cross-origin"/>}
+      <div className="experience-reel-copy"><span className="eyebrow lavender">{String(i+1).padStart(2,'0')} / VIDEO EDITING</span><h3>{reel.title}</h3>{reel.description && <p>{reel.description}</p>}<a className="text-link" href={reel.url} target="_blank" rel="noreferrer">Watch on Instagram <ArrowUpRight size={17}/></a></div>
+     </article>;
+    })}</div>
+   </section>}
+  </section>}
+ </main>;
+}
 
 export function ProjectCards({projects}: {projects: Project[]}) {
  return <div className="project-grid">{projects.map(project => <a className="project-card" key={project.id} href={`${asset('project.html')}?id=${encodeURIComponent(project.id)}`} aria-label={`View ${project.title}${project.category ? ` (${project.category})` : ''} project details`}>
@@ -55,9 +96,9 @@ export default function DetailPages({page, content}: {page: 'projects' | 'experi
  const isProjects = page === 'projects';
  return <main className="detail-page" id="home">
   <section className="detail-intro section">
-   <a className="text-link back-link" href={asset('index.html')}><ArrowLeft size={16}/> Back to portfolio</a>
+  
    <span className="eyebrow green">{isProjects ? 'IDEAS INTO PRACTICE' : 'WORK & LEADERSHIP'}</span>
-   <h1>{isProjects ? <>Projects with <em>purpose.</em></> : <>Experience that <em>shapes me.</em></>}</h1>
+   <h1 className={isProjects ? undefined : 'experience-heading'}>{isProjects ? <>Projects with <em>purpose.</em></> : <>Experience that <em>shapes me.</em></>}</h1>
    <p>{isProjects ? 'A closer look at the things I build and the needs they address.' : 'My work, the teams I’ve led, and the contributions I’ve made along the way.'}</p>
   </section>
   {isProjects ? <section className="detail-collection projects-listing section" aria-label="Projects">
@@ -68,10 +109,11 @@ export default function DetailPages({page, content}: {page: 'projects' | 'experi
     const entries = content.experience.filter(entry => (entry.category || 'Work') === category);
     return entries.length > 0 && <div className="experience-group" key={category}>
      <h2 className="group-heading">{category === 'Work' ? 'Work experience' : 'Leadership'}</h2>
-     {entries.map((entry, index) => <article className="detail-card" key={`${entry.company}-${index}`}>
-      <div className="detail-meta"><span className="eyebrow lavender">{entry.dates || category}</span><h3>{entry.role}</h3><p>{entry.company}</p>{entry.location && <span className="detail-location">{entry.location}</span>}</div>
-      <div className="detail-copy"><p className="detail-description">{entry.description}</p>{!!entry.highlights?.length && <ul>{entry.highlights.filter(highlight => highlight.trim()).map((highlight, i) => <li key={i}>{highlight}</li>)}</ul>}</div>
-     </article>)}
+     <div className="experience-card-grid">{entries.map(entry => <a className={`experience-card${entry.cover ? ' experience-card-with-cover' : ''}`} key={experienceId(entry)} href={`${asset('experience-detail.html')}?id=${encodeURIComponent(experienceId(entry))}`}>
+      {entry.cover && <><img className="experience-card-cover" src={asset(entry.cover)} alt="" loading="lazy"/><span className="experience-card-shade" aria-hidden="true"/></>}
+      <span className="eyebrow lavender">{entry.dates || category}</span><h3>{entry.company}</h3><p className="experience-card-role">{entry.role}</p><p className="experience-card-summary">{entry.description}</p>
+      <span className="experience-card-link">{entry.reels?.length ? `Explore ${entry.reels.length} reels & my role` : 'Explore my role'} <ArrowUpRight size={18}/></span>
+     </a>)}</div>
     </div>;
    })}
   </section>}

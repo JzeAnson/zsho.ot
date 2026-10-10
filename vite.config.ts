@@ -40,4 +40,4 @@ function editorApi(): Plugin {
   });
  }};
 }
-export default defineConfig({base:'./',build:{rollupOptions:{input:{main:resolve('index.html'),projects:resolve('projects.html'),project:resolve('project.html'),experience:resolve('experience.html')}}},plugins:[react(),editorApi()]});
+export default defineConfig({base:'./',build:{rollupOptions:{input:{main:resolve('index.html'),projects:resolve('projects.html'),project:resolve('project.html'),experience:resolve('experience.html'),experienceDetail:resolve('experience-detail.html')}}},plugins:[react(),editorApi()]});

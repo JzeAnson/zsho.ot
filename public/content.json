@@ -13,48 +13,87 @@
   ],
   "experience": [
     {
-      "company": "BBK",
-      "role": "Creative production intern",
-      "description": "Edited reels, assisted with shoots, and helped set up scenes for filming."
-    },
-    {
-      "company": "Operion E-Commerce Sdn Bhd",
-      "role": "Web Developer Intern",
+      "company": "BBK Network",
+      "role": "Content Creator Intern",
+      "description": "Edited reels, assisted with shoots, and helped set up scenes for filming.",
+      "id": "bbk",
       "category": "Work",
-      "dates": "Sept 2022 – Feb 2023 · 6 months",
-      "location": "Malaysia",
-      "description": "Developed responsive web interfaces and improved user experience, backend integration, and development workflows.",
       "highlights": [
-        "Developed responsive web interfaces using HTML, CSS, and JavaScript, improving page load performance by up to 20%.",
-        "Collaborated with cross-functional teams to optimise user experience, reducing user drop-off rates.",
-        "Streamlined backend integration and debugging processes, improving system performance by 15%.",
-        "Adopted new technologies and development practices to improve workflow efficiency."
-      ]
+        "Edited reels for BBK.",
+        "Assisted with shoots and helped set up scenes for filming."
+      ],
+      "reels": [
+        {
+          "id": "DdvO-G4z1he",
+          "title": "Can Kuala Lumpur become a cultural and arts hub?",
+          "url": "https://www.instagram.com/reel/DdvO-G4z1he/"
+        },
+        {
+          "id": "DdRDlcqpIDj",
+          "title": "努力，还一定会成功吗?",
+          "url": "https://www.instagram.com/reel/DdRDlcqpIDj/"
+        },
+        {
+          "id": "DdQ2dvVsL0E",
+          "title": "赛沙迪如何从有罪变成无罪的?",
+          "url": "https://www.instagram.com/reel/DdQ2dvVsL0E/"
+        },
+        {
+          "id": "DcIuCKXyHyv",
+          "title": "90秒帶你理解大馬所屬的「M型社會」",
+          "url": "https://www.instagram.com/reel/DcIuCKXyHyv/"
+        },
+        {
+          "id": "DbAwxfSy4dC",
+          "title": "卖贝果的背后是老屋翻新？",
+          "url": "https://www.instagram.com/reel/DbAwxfSy4dC/"
+        }
+      ],
+      "cover": "bbk.jpg",
+      "dates": "July 2026 - Septemeber 2026"
     },
     {
       "company": "MyTech Career Fair 2025, University of Malaya",
       "role": "Head of Multimedia Department",
       "category": "Leadership",
-      "dates": "2025",
+      "dates": "March 2025 - May 2025",
       "location": "Kuala Lumpur, Malaysia",
       "description": "Led multimedia production for event content and promotional materials.",
       "highlights": [
         "Led the multimedia team in planning and producing visual content for events and promotional materials.",
         "Managed design, photography, and video production to ensure consistent branding and high-quality output.",
         "Coordinated with different departments to deliver engaging multimedia content that enhanced audience reach and event impact."
-      ]
-    },
-    {
-      "company": "SULAM Project, University of Malaya",
-      "role": "Project Manager",
-      "category": "Leadership",
-      "dates": "2024",
-      "location": "Kuala Lumpur, Malaysia",
-      "description": "Managed a multidisciplinary student team delivering a Java workshop for secondary school students.",
-      "highlights": [
-        "Led a multidisciplinary student team to organise and execute a Java workshop for secondary school students.",
-        "Coordinated project tasks, timelines, and deliverables to ensure smooth workshop execution.",
-        "Facilitated team communication and collaboration to deliver an effective learning experience for participants."
+      ],
+      "id": "mytech-career-fair-2025",
+      "cover": "mytech.png",
+      "gallery": [
+        {
+          "src": "mytech/1748321071462.jpeg",
+          "alt": "MyTech design board with logo variations, promotional graphics, posters, and event materials",
+          "caption": "Event branding & promotional materials",
+          "wide": true
+        },
+        {
+          "src": "mytech/1748321071493.jpeg",
+          "alt": "MyTech design board showing social media posts and sponsor graphics",
+          "caption": "Social media & sponsor graphics",
+          "wide": true
+        },
+        {
+          "src": "mytech/1748321076861.jpeg",
+          "alt": "MyTech Career Fair team posing together for a group selfie",
+          "caption": "The MyTech team"
+        },
+        {
+          "src": "mytech/1748321080197.jpeg",
+          "alt": "Career fair attendees and organisers talking at an exhibition booth",
+          "caption": "Connecting at the career fair"
+        },
+        {
+          "src": "mytech/1748321080214.jpeg",
+          "alt": "Seven people posing together at the MyTech Career Fair venue",
+          "caption": "A moment from the event"
+        }
       ]
     }
   ],
@@ -190,7 +229,9 @@
       "url": "https://dance-cue.vercel.app/",
       "repository": "https://github.com/JzeAnson/DanceCue",
       "cover": "photos/dancecue_cover.JPG",
-      "category": "Software Project"
+      "category": "Software Project",
+      "subtitle": "Minihackathon . Dance Project",
+      "role": "Developer"
     },
     {
       "id": "qdees-shine-like-a-star",
@@ -265,7 +306,8 @@
         "Built with Phaser 4, React, and TypeScript."
       ],
       "url": "",
-      "repository": "https://github.com/zhengwei0409/8am-rush"
+      "repository": "https://github.com/zhengwei0409/8am-rush",
+      "role": "Team Leader"
     }
   ]
 }
