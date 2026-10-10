@@ -1,5 +1,6 @@
 import {ArrowLeft, ArrowUpRight, Github} from 'lucide-react';
 import {asset, type Content, type Project, type Experience} from './types';
+import HeroImage from './HeroImage';
 
 const experienceId = (entry: Experience) => entry.id || entry.company;
 
@@ -8,7 +9,7 @@ export function ExperienceDetailPage({content, entryId}: {content: Content; entr
  const highlights = entry?.highlights?.filter(highlight => highlight.trim()) || [];
  return <main className="detail-page" id="home">
   <section className={entry?.cover ? 'hero experience-hero' : 'detail-intro section'}>
-   {entry?.cover && <><img className="hero-image" src={asset(entry.cover)} alt={`${entry.company} behind the scenes`} fetchPriority="high"/><div className="hero-shade"/></>}
+   {entry?.cover && <><HeroImage src={asset(entry.cover)} alt={`${entry.company} behind the scenes`}/><div className="hero-shade"/></>}
    <div className={entry?.cover ? 'experience-hero-copy' : 'experience-intro-copy'}>
    <a className="text-link back-link" href={asset('experience.html')}><ArrowLeft size={16}/> All experience</a>
    <span className="eyebrow green">EXPERIENCE / A CLOSER LOOK</span>
@@ -52,7 +53,7 @@ export function ProjectCards({projects}: {projects: Project[]}) {
 
 export function ProjectSummary({content}: {content: Content}) {
  const projects = content.projects || [];
- return <section className="projects-summary section" id="projects">
+ return <section className="projects-summary section" id="projects" data-ambient-glow="">
   <div className="section-top"><span className="eyebrow muted">04 / PROJECTS</span><span className="small muted">Ideas put into practice.</span></div>
   <div className="section-heading"><h2>Built with <em>purpose.</em></h2><p>Ideas, events, and creative work.</p></div>
   <ProjectCards projects={projects.slice(0, 4)}/>
@@ -101,7 +102,7 @@ export default function DetailPages({page, content}: {page: 'projects' | 'experi
    <h1 className={isProjects ? undefined : 'experience-heading'}>{isProjects ? <>Projects with <em>purpose.</em></> : <>Experience that <em>shapes me.</em></>}</h1>
    <p>{isProjects ? 'A closer look at the things I build and the needs they address.' : 'My work, the teams I’ve led, and the contributions I’ve made along the way.'}</p>
   </section>
-  {isProjects ? <section className="detail-collection projects-listing section" aria-label="Projects">
+  {isProjects ? <section className="detail-collection projects-listing section" aria-label="Projects" data-ambient-glow="">
    <ProjectCards projects={content.projects || []}/>
    {!(content.projects || []).length && <p className="muted">More projects will be added as the collection grows.</p>}
   </section> : <section className="detail-collection section" aria-label="Experience">
