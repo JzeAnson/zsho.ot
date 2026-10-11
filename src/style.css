@@ -200,3 +200,8 @@ main .project-card,main .experience-card{transition:border-color 300ms ease,box-
 .projects-listing{padding-top:48px;padding-bottom:60px}.projects-listing .project-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:30px}.projects-listing .project-card{aspect-ratio:1/1;padding:32px;border-radius:18px}.projects-listing .project-card h3{font-size:clamp(24px,2.3vw,34px);line-height:1.35}.projects-listing .project-card-category{font-size:12px;margin-top:14px}.projects-listing .project-card-arrow{right:22px;bottom:22px}
 @media(max-width:1000px){.projects-listing .project-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}}
 @media(max-width:650px){.projects-listing{padding-top:30px}.projects-listing .project-grid{grid-template-columns:1fr;gap:22px}.projects-listing .project-card{aspect-ratio:4/3;padding:28px}.projects-listing .project-card h3{font-size:28px}}
+
+.about-contact{margin-top:32px}
+.about-contact-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.about-contact-links a{display:inline-flex;align-items:center;gap:9px;min-height:44px;padding:12px 14px;border:1px solid var(--line);font-size:12px;color:#b3b9ab}
+.about-contact-links a:hover,.about-contact-links a:focus-visible{color:var(--green);border-color:var(--green)}
